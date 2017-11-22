@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#first run "chmod +x /home/xubuntu/panoq.sh"
+#bash panoq.sh
 
 sudo timedatectl set-timezone Europe/Helsinki
 setxkbmap fi
