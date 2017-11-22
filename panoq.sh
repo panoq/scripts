@@ -5,7 +5,7 @@
 sudo timedatectl set-timezone Europe/Helsinki
 setxkbmap fi
 sudo apt-get update
-sudo apt-get install -y git tree puppet firefox
+sudo apt-get install -y git puppet
 
 git clone https://github.com/panoq/drdes
 sudo mv /home/xubuntu/drdes/ /etc/puppet/modules/drdes
