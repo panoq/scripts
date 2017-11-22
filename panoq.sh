@@ -1,15 +1,13 @@
 #!/bin/bash
 
-#first run chmod +x /home/xubuntu/panoq.sh
+#first run "chmod +x /home/xubuntu/panoq.sh"
 
-sudo timedatectl set-timezone "Europe/Helsinki"
+sudo timedatectl set-timezone Europe/Helsinki
 setxkbmap fi
 sudo apt-get update
-sudo apt-get install -y git tree puppet
+sudo apt-get install -y git tree puppet firefox
 
-git clone https://github.com/panoq/lkh
-sudo cp -r /home/xubuntu/lkh/modules/sshd /etc/puppet/modules/sshd
+git clone https://github.com/panoq/drdes
+sudo mv /home/xubuntu/drdes/ /etc/puppet/modules/drdes
 
-sudo puppet apply -e 'class {"sshd":}'
-
-sudo service sshd status
+sudo puppet apply -e 'class {"drdes":}'
